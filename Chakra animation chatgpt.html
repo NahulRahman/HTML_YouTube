@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            line-height: 1.5em;
+            font-weight: 400;
+            background-image: linear-gradient(to bottom right, #4f9ed6, #102761, #7a2848);
+            font-family: 'Karla', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            color: #f4f4f4bb;
+            text-shadow: #1e2761 11px 19px 18px;
+        }
+        .main-container #first-div:before {
+            content: 'css animation';
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 0;
+            right: 0;
+            line-height: 100px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 6em;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            margin: -55px 0 0 0;
+            transition: transform 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .main-container #first-div:after {
+            content: 'Laconic';
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 0;
+            right: 0;
+            line-height: 50px;
+            margin: 40px 0 0 0;
+            text-transform: uppercase;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 12px;
+            transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .main-container #first-div > div {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        .main-container #first-div > div > div {
+            height: 800px;
+            width: 800px;
+            max-width: 800px;
+            min-width: 800px;
+            transition: all 0.3s ease-in-out;
+        }
+        .main-container #first-div > div > div span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 4px;
+            margin: 0;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 18px;
+            border-color: #f4f4f4bb transparent transparent #f4f4f4bb;
+            animation-name: Laconic;
+            animation-duration: 30s;
+            animation-iteration-count: 6;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        @keyframes Laconic {
+            2% {
+                transform: rotate(0);
+            }
+            48% {
+                transform: rotate(180deg);
+            }
+            52% {
+                transform: rotate(180deg);
+            }
+            98% {
+                transform: rotate(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="main-container">
+    <div id="first-div">
+        <div id="second-div">
+            <div>
+                <span>
+                    <span>
+                        <span>
+                            <span>
+                                <span>
+                                    <span>
+                                        <span>
+                                            <span>
+                                                <span>
+                                                    <span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
