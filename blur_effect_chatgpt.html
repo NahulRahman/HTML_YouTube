@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f3efef;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        .blurred-text {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 72px;
+            text-transform: uppercase;
+            color: aqua;
+            transition: filter 0.3s ease-in-out;
+        }
+        .blurred-text:hover {
+            filter: blur(10px);
+        }
+        .blurred-image {
+            background-image: url("e:\languages\HTML\images\Kuakata project\Nahul.jpg"); /* Replace with the correct image path */
+            height: 350px;
+            width: 450px;
+            background-size: cover;
+            border-radius: 15px;
+            box-shadow: 1px 1px 10px 1px blue;
+            transition: filter 0.3s ease-in-out;
+        }
+        .blurred-image:hover {
+            filter: blur(15px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="blurred-text">Binti apu</h1>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <div class="blurred-image"></div>
+    </div>
+</body>
+</html>
