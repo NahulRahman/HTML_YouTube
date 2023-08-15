@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Drop Animation</title>
+    <style>
+        body {
+            background-color: #3498DB;
+            overflow: hidden;
+        }
+        .water-drop {
+            position: absolute;
+            left: 50%;
+            top: -40px;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 30px;
+            background: #3498DB;
+            border-radius: 50% 50% 0 0;
+            animation: droping 2s cubic-bezier(1, 0, 0.91, 0.19) infinite;
+        }
+        .water-drop:before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            border-radius: 50%;
+            bottom: -20px;
+            left: 0;
+        }
+        @keyframes droping {
+            to {
+                top: 80%;
+            }
+        }
+        .circle-wave {
+            position: absolute;
+            left: 50%;
+            bottom: 60px;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 1px;
+            border: #FFF 7px solid;
+            border-radius: 300px / 150px;
+            animation: laconic 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s infinite;
+        }
+        .circle-wave:after {
+            content: "";
+            position: absolute;
+            opacity: 0;
+            top: -5px;
+            left: -5px;
+            width: 2px;
+            height: 1px;
+            border: #FFF 5px solid;
+            border-radius: 300px / 150px;
+            animation: laconic-2 2s 2s infinite;
+        }
+        @keyframes laconic {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                border-width: 1px;
+                bottom: -100px;
+                width: 600px;
+                height: 300px;
+                opacity: 0;
+            }
+        }
+        @keyframes laconic-2 {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                border-width: 1px;
+                bottom: 100px;
+                width: 200px;
+                height: 100px;
+                left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="water-drop"></div>
+    <div class="circle-wave"></div>
+</body>
+</html>
